@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import { Spa } from "astro-spa";
 
 let title = 'Example Blog';
 let description = 'The perfect starter for your perfect blog.';
@@ -40,6 +41,7 @@ const posts = unsortedPosts.sort(function (a, b) {
 				</section>
 			</main>
 		</div>
+		<Spa />
 	</body>
 </html>
 
