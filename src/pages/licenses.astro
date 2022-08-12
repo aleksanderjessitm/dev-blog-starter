@@ -1,9 +1,10 @@
 ---
 import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport.astro';
+import GeneralLayout from '../layouts/GeneralLayout.astro';
 // ...
 ---
 
-<body>
+<GeneralLayout >
     <!-- Place component inside `BODY` tag -->
   
     <!-- All properties are optional -->
@@ -11,9 +12,9 @@ import LicensesReport from '@julian_cataldo/astro-licenses-report/LicensesReport
       useDev={true}
       depth={2}
       nameText={'Packages used in the creation of this blog'}
-      authorText={'Aleksander Jess'}
-      licenseText={'https://www.gnu.org/licenses/agpl-3.0.en.html'}
+      authorText={'Template by Aleksander Jess'}
+      licenseText={'Licensed under AGPL v3'}
       linkText={'https://www.gnu.org/licenses/agpl-3.0.en.html'}
     />
   
-  </body>
+  </GeneralLayout>

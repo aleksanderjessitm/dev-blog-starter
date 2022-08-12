@@ -5,4 +5,5 @@ export const get = () => rss({
     description: `Welcome to my blog, where I write about ${config.expertise && config.expertise.join(", ")}`,
     items: import.meta.glob("./**/*.md"),
     customData: `<language>en</language>`,
+    
 })

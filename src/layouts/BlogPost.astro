@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import {Image} from '@astrojs/image/components'
 
 export interface Props {
 	content: {
@@ -17,6 +18,9 @@ export interface Props {
 const {
 	content: { title, description, publishDate, heroImage },
 } = Astro.props as Props;
+
+
+
 ---
 
 <html>
@@ -30,11 +34,13 @@ const {
 			<header>
 				{heroImage && (
 					<img
-						width="720"
-						height="420"
+						width={1050}
+						height={450}
 						loading="lazy"
+						
 						src={heroImage.src}
 						alt={heroImage.alt}
+						
 					/>
 				)}
 				<h1 class="title">{title}</h1>
