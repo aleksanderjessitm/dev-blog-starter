@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 import mdx from "@astrojs/mdx";
-import svelte from "@astrojs/svelte";
 import image from "@astrojs/image";
 import netlify from '@astrojs/netlify/functions'
 import sitemap from '@astrojs/sitemap';
@@ -31,10 +30,8 @@ export default defineConfig({
       customPages: [
         `${config.domainName}/`,
         `${config.domainName}/posts`,
-        `${config.domainName}/licenses`,
       ]
     }),
-    svelte(),
     image(),
   ],
   site: `${config.domainName ?? "https://example.com"}`
