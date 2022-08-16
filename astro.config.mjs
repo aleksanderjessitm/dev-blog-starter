@@ -11,7 +11,6 @@ import {config} from './config.mjs';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    appType: "spa",
     build: {
       reportCompressedSize: true
     },
