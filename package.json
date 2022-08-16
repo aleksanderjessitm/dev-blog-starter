@@ -12,12 +12,12 @@
   "scripts": {
     "dev": "run-s generate-styles astro:dev",
     "start": "run-s generate-styles astro:start",
-    "build": "run-s generate-styles astro:build",
+    "build": "astro build --experimental-integrations",
     "astro:dev": "astro dev",
     "astro:start": "astro dev --experimental-integrations",
-    "astro:build": "astro build --experimental-integrations",
     "preview": "astro preview --experimental-integrations",
     "astro": "astro",
+    "prepare": "run-s generate-styles build",
     "generate-styles": "node ./generateStyles.mjs"
   },
   "devDependencies": {

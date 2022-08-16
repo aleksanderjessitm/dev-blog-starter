@@ -3,11 +3,13 @@
 Welcome to a starter blog for developers. I included all basics to make sure you are ready to post in no time. 
 
 ## Config
-Be sure to check out [`config.mjs`](./config.mjs) to customize the look of the website, and provide some basic info. Simply edit the values you want.
+Be sure to check out [`config.mjs`](./config.mjs) to customize the look of the website, and provide some basic info. Simply edit the values you want. Enter your first name, last name, full name, domain name, etc.
 
 Prior to running any npm script, the code over at [`generateStyles.mjs`](./generateStyles.mjs) will run, generating the scss variables.
 
 scss is a superset of css. Any valid css will be valid scss.
+
+**After making changes to config.ts, run `yarn prepare` or `npm run prepare`.**
 
 ## Styling
 The main styles are over at [`styles.scss`](./src/styles/styles.scss)
@@ -18,14 +20,11 @@ The site is configured to be deployed at Vercel.
 To deploy simply install Vercel's CLI:
 `npm i -g vercel`
 
-Then run:
-`vercel deploy`
+Then run two commands, one after another:
+`yarn build # or npm run build`
+`vercel deploy --prebuilt`
 
-After a successful deploy, deploy all next versions by running
-
-`vercel --prod`.
-
-You may also link your GitHub/GitLab repo on Vercel's dashboard for convenient deploys.
+After a successful deploy, you may link your GitHub/GitLab repo on Vercel's dashboard for convenient deploys.
 
 ## License AGPLv3
 Copyright (C) 2022 Aleksander Jess of ITMAGINATION
