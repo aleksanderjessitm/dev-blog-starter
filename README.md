@@ -13,9 +13,21 @@ scss is a superset of css. Any valid css will be valid scss.
 The main styles are over at [`styles.scss`](./src/styles/styles.scss)
 
 ## Deployment
-To deploy the site, follow the guide at [https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)
+The site is configured to be deployed at Vercel. 
 
-## License 
+To deploy simply install Vercel's CLI:
+`npm i -g vercel`
+
+Then run:
+`vercel deploy`
+
+After a successful deploy, deploy all next versions by running
+
+`vercel --prod`.
+
+You may also link your GitHub/GitLab repo on Vercel's dashboard for convenient deploys.
+
+## License AGPLv3
 Copyright (C) 2022 Aleksander Jess of ITMAGINATION
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
