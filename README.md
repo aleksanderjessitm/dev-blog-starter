@@ -23,7 +23,7 @@ to then login:
 `netlify login`
 
 Then run:
-`netlify deploy`
+`netlify deploy --prod`
 
 
 After a successful deploy, you may link your GitHub/GitLab repo on Netlify's dashboard for convenient deploys.
