@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 /* Box sizing rules */
 *,
 *::before,
@@ -71,4 +73,57 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+img.blog-image {
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  max-width: 1280px;
+}
+
+@media (max-width: 50em) {
+  img.blog-image {
+    height: 260px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.content.blog {
+  margin-bottom: 8rem;
+}
+
+.content.blog :global(h2) {
+  margin-top: 4rem;
+}
+
+header.blog {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid $text-color;
+}
+
+.title.blog,
+time.blog {
+  margin: 0;
+}
+
+time.blog {
+  color: $text-color__tint;
+}
+
+.title.blog {
+  font-size: 2.25rem;
+  font-weight: 700;
 }
