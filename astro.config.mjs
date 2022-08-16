@@ -10,16 +10,6 @@ import { config } from './config.mjs';
 export default defineConfig({
   output: 'server',
   adapter: netlify(),
-  vite: {
-    build: {
-      reportCompressedSize: true
-    },
-    server: {
-      watch: {
-        usePolling: true,
-      }
-    }
-  },
 
   integrations: [
     preact({
