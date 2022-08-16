@@ -1,4 +1,4 @@
-import { config } from '../../config'
+import config from '../../config.mjs'
 
 export const get = () => rss({
     title: `${config.fullName}'s Blog`,

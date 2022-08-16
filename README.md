@@ -3,9 +3,9 @@
 Welcome to a starter blog for developers. I included all basics to make sure you are ready to post in no time. 
 
 ## Config
-Be sure to check out [`config.js`](./config.js) to customize the look of the website, and provide some basic info. Simply edit the values you want.
+Be sure to check out [`config.mjs`](./config.mjs) to customize the look of the website, and provide some basic info. Simply edit the values you want.
 
-Prior to running any npm script, the code over at [`generateStyles.js`](./generateStyles.js) will run, generating the scss variables.
+Prior to running any npm script, the code over at [`generateStyles.mjs`](./generateStyles.mjs) will run, generating the scss variables.
 
 scss is a superset of css. Any valid css will be valid scss.
 

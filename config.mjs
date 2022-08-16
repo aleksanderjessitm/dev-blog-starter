@@ -1,4 +1,4 @@
-module.exports = config = {
+export const config = {
   mainColor: "#005ac2",
   secondaryColor: "#575e71",
   tertiaryColor: "#715573",
@@ -19,3 +19,4 @@ module.exports = config = {
     "JavaScript"
   ]
 }
+

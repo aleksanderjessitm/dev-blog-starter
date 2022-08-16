@@ -6,7 +6,7 @@ import svelte from "@astrojs/svelte";
 import image from "@astrojs/image";
 import react from "@astrojs/react";
 
-import {config} from './config';
+import {config} from './config.mjs';
 
 // https://astro.build/config
 export default defineConfig({
