@@ -15,7 +15,7 @@
     "build": "astro build",
     "astro:dev": "astro dev",
     "astro:start": "astro dev --experimental-integrations",
-    "preview": "astro preview --experimental-integrations",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro",
     "build-with-styles": "run-s generate-styles build",
     "generate-styles": "node ./generateStyles.mjs"
@@ -40,6 +40,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@astrojs/deno": "^1.0.0",
     "@astrojs/rss": "^0.2.2",
     "@astrojs/vercel": "^1.0.0",
     "astro-imagetools": "^0.6.10",

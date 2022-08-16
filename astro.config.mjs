@@ -2,15 +2,14 @@ import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
-import netlify from '@astrojs/netlify/functions'
+import deno from '@astrojs/deno'
 import sitemap from '@astrojs/sitemap';
 import { config } from './config.mjs';
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: netlify(),
-
+  adapter: deno(),
   integrations: [
     preact({
       compat: true
