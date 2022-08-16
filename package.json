@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "^14",
+    "node": "^14 || ^16",
     "vscode": "^1.22.0"
   },
   "maintainers": [
@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "run-s generate-styles astro:dev",
     "start": "run-s generate-styles astro:start",
-    "build": "astro build --experimental-integrations",
+    "build": "astro build",
     "astro:dev": "astro dev",
     "astro:start": "astro dev --experimental-integrations",
     "preview": "astro preview --experimental-integrations",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@astrojs/image": "^0.3.2",
     "@astrojs/mdx": "^0.7.0",
+    "@astrojs/netlify": "^1.0.1",
     "@astrojs/preact": "^0.5.2",
     "@astrojs/sitemap": "^0.3.0",
     "@astrojs/svelte": "^0.5.1",
