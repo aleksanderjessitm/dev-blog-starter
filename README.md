@@ -17,14 +17,16 @@ The main styles are over at [`styles.scss`](./src/styles/styles.scss)
 ## Deployment
 The site is configured to be deployed at Vercel. 
 
-To deploy simply install Vercel's CLI:
-`npm i -g vercel`
+To deploy simply install Netlify's CLI:
+`npm install netlify-cli -g`
+to then login: 
+`netlify login`
 
-Then run two commands, one after another:
-`yarn build # or npm run build`
-`vercel deploy --prebuilt`
+Then run:
+`netlify deploy`
 
-After a successful deploy, you may link your GitHub/GitLab repo on Vercel's dashboard for convenient deploys.
+
+After a successful deploy, you may link your GitHub/GitLab repo on Netlify's dashboard for convenient deploys.
 
 ## License AGPLv3
 Copyright (C) 2022 Aleksander Jess of ITMAGINATION
