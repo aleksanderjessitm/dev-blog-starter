@@ -1,9 +1,10 @@
-export const config = {
+module.exports = config = {
   mainColor: "#005ac2",
   secondaryColor: "#575e71",
   tertiaryColor: "#715573",
   errorColor: "#ba1a1a",
   backgroundColor: "#fefbff",
+  textColor: "#100f0f",
   fullName: "John Doe",
   firstName: "John",
   lastName: "Doe",
