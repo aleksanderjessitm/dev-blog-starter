@@ -1,38 +1,62 @@
-# A Starter Dev Blog
+# A statically generated blog example using Next.js, Markdown, and TypeScript
 
-Welcome to a starter blog for developers. I included all basics to make sure you are ready to post in no time. 
+This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
 
-## Config
-Be sure to check out [`config.mjs`](./config.mjs) to customize the look of the website, and provide some basic info. Simply edit the values you want. Enter your first name, last name, full name, domain name, etc.
+This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
 
-Prior to running any npm script, the code over at [`generateStyles.mjs`](./generateStyles.mjs) will run, generating the scss variables.
+The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
 
-scss is a superset of css. Any valid css will be valid scss.
+To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
 
-**After making changes to config.ts, that change colors, run `yarn generate-styles` or `npm run generate-styles`.**
+## Demo
 
-## Styling
-The main styles are over at [`styles.scss`](./src/styles/styles.scss)
+[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
 
-## Deployment
-The site is configured to be deployed at Vercel. 
+## Deploy your own
 
-To deploy simply install Netlify's CLI:
-`npm install netlify-cli -g`
-to then login: 
-`netlify login`
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter)
 
-Then run:
-`netlify deploy --prod`
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
 
+### Related examples
 
-After a successful deploy, you may link your GitHub/GitLab repo on Netlify's dashboard for convenient deploys.
+- [WordPress](/examples/cms-wordpress)
+- [DatoCMS](/examples/cms-datocms)
+- [Sanity](/examples/cms-sanity)
+- [TakeShape](/examples/cms-takeshape)
+- [Prismic](/examples/cms-prismic)
+- [Contentful](/examples/cms-contentful)
+- [Strapi](/examples/cms-strapi)
+- [Agility CMS](/examples/cms-agilitycms)
+- [Cosmic](/examples/cms-cosmic)
+- [ButterCMS](/examples/cms-buttercms)
+- [Storyblok](/examples/cms-storyblok)
+- [GraphCMS](/examples/cms-graphcms)
+- [Kontent](/examples/cms-kontent)
+- [Umbraco Heartcore](/examples/cms-umbraco-heartcore)
+- [Builder.io](/examples/cms-builder-io)
+- [TinaCMS](/examples/cms-tina/)
 
-## License AGPLv3
-Copyright (C) 2022 Aleksander Jess of ITMAGINATION
+## How to use
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+```bash
+npx create-next-app --example blog-starter blog-starter-app
+```
 
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+```bash
+yarn create next-app --example blog-starter blog-starter-app
+```
+
+```bash
+pnpm create next-app --example blog-starter blog-starter-app
+```
+
+Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+# Notes
+
+`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
