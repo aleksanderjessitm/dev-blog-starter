@@ -17,7 +17,7 @@
     "astro:start": "astro dev --experimental-integrations",
     "preview": "astro preview --experimental-integrations",
     "astro": "astro",
-    "prepare": "run-s generate-styles build",
+    "build-with-styles": "run-s generate-styles build",
     "generate-styles": "node ./generateStyles.mjs"
   },
   "devDependencies": {

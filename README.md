@@ -9,7 +9,7 @@ Prior to running any npm script, the code over at [`generateStyles.mjs`](./gener
 
 scss is a superset of css. Any valid css will be valid scss.
 
-**After making changes to config.ts, run `yarn prepare` or `npm run prepare`.**
+**After making changes to config.ts, that change colors, run `yarn generate-styles` or `npm run generate-styles`.**
 
 ## Styling
 The main styles are over at [`styles.scss`](./src/styles/styles.scss)
