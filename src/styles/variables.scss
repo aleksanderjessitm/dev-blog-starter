@@ -1,0 +1,19 @@
+
+:root {
+    $main-color: #005ac2;
+    $secondary-color: #575e71;
+    $tertiary-color: #715573;
+    $error-color: #ba1a1a;
+    $background-color: #fefbff;
+    $text-color: #100f0f;
+    $main-color__tint: lighten($main-color, 30%);
+    $main-color__shade: darken($main-color, 30%);
+    $secondary-color__tint: lighten($secondary-color, 30%);
+    $secondary-color__shade: darken($secondary-color, 30%);
+    $tertiary-color__tint: lighten($tertiary-color, 30%);
+    $tertiary-color__shade: darken($tertiary-color, 30%);
+    $error-color__tint: lighten($error-color, 30%);
+    $error-color__shade: darken($error-color, 30%);
+    $background-color__tint: lighten($background-color, 35%);
+    $background-color__shade: darken($background-color, 35%);
+  }
