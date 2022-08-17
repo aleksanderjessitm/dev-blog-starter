@@ -6,6 +6,7 @@ import { PostFrontMatter } from '../../types/postFrontmatter';
 import SEO from '../../components/SEO/SEO';
 
 import { config } from '../../blogConfig';
+import Chip from '../../components/Chip/Chip';
 
 interface Props {
     frontmatter: PostFrontMatter;
@@ -23,11 +24,20 @@ function PostDetail({ frontmatter, content }: Props) {
                 socialImgPic={`${config.domainName}/${frontmatter.socialImage.toString()}`}
             />
 
-            <Image src={`/${frontmatter.socialImage}`} width={1920} height={500} alt={frontmatter.altText} className="w-[100vw] h-[40vh] object-cover mb-2 lg:mb-6" />
-            <div className='prose mx-auto mt-5 mb-20'>
-                <h1 className='mx-auto text-center'>{frontmatter.title}</h1>
-                <article className='prose' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+            <Image src={`/${frontmatter.socialImage}`} width={1920} height={500} alt={frontmatter.altText} className="w-[100vw] h-[40vh] object-cover mb-4 lg:mb-10" />
+
+            <h1 className='text-5xl font-extrabold w-full mx-auto text-center mt-8'>{frontmatter.title}</h1>
+            <div className='flex w-full flex-row align-middle justify-center space-x-6 my-6'>
+                {frontmatter.tags && frontmatter.tags.map(tag => {
+                return <Chip key={tag} text={tag.toLocaleUpperCase()} />
+            })}
             </div>
+            <article
+                className='prose mx-auto mt-5 mb-20'
+                dangerouslySetInnerHTML={{ __html: md().render(content) }}
+            >
+
+            </article>
         </>
     )
 }
