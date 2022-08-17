@@ -7,7 +7,7 @@ function Testimonials() {
             <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
                 <h3 className="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
                 <p className="mb-6 pb-2 md:mb-12 md:pb-0">
-                    If I said I am a great specialist, you probably wouldn't believe me. Don't take my word for it - take theirs, instead.
+                    If I said I am a great specialist, you probably wouldn&apos;t believe me. Don&apos;t take my word for it - take theirs, instead.
                 </p>
             </div>
 
