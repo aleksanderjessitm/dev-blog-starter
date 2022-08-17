@@ -4,6 +4,7 @@ import Jumbotron from '../components/Jumbotron/Jumbotron';
 
 import {config} from '../blogConfig';
 import SEO from '../components/SEO/SEO';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       heading={`Hello, my name is ${config.fullName}.`}
       subheading={`If you want to read about ${config.expertise.join(", ")}, then you are in the right place.`}
     />
+    <Testimonials />
     </>
   )
 }

@@ -17,6 +17,9 @@ function BlogIndex({posts}) {
         keywords={config.expertise}
         socialImgPic={'/public/images/ITMAGINATION_Logo_big_with_bg.png'}
     />
+    <div className='text-4xl flex w-full my-5'>
+        <h1 className='w-full text-center'>Welcome to my blog!</h1>
+    </div>
     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
       {posts.map(({ slug, frontmatter }) => (
         <div

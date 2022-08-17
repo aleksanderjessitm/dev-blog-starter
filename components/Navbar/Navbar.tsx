@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { config } from "../../blogConfig";
 
 interface Props {
     fullName: string
@@ -36,7 +37,7 @@ export default function Navbar({fullName}: Props) {
                 </div>
                 <div className="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
                     <Link href="/">
-                        <a className="text-xl text-white pr-2 font-semibold">{}</a>
+                        <a className="text-xl text-white pr-2 font-semibold">{config.fullName}</a>
                     </Link>
                     <ul className="navbar-nav mr-auto lg:flex lg:flex-row">
                         <li className="nav-item">
