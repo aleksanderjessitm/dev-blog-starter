@@ -3,7 +3,9 @@ import matter from 'gray-matter';
 import md from 'markdown-it'
 import Image from 'next/image'
 import { PostFrontMatter } from '../../types/postFrontmatter';
-import Head from 'next/head';
+import SEO from '../../components/SEO/SEO';
+
+import {config} from '../../blogConfig';
 
 interface Props {
     frontmatter: PostFrontMatter;
@@ -14,11 +16,16 @@ interface Props {
 function PostDetail({ frontmatter, content }: Props) {
     return (
         <>
-            <Head>
-                <meta name="description" content={frontmatter.metaDesc} />
-                <title>{frontmatter.metaTitle}</title>
-            </Head>
-            <img src={`/${frontmatter.socialImage}`} alt={frontmatter.altText} className="w-[100vw] h-[40vh] object-cover mb-2 lg:mb-6" />
+            
+                <SEO 
+                    title={frontmatter.metaTitle}
+                    description={frontmatter.metaDesc}    
+                    keywords={frontmatter.tags}
+                    socialImgPic={`${config.domainName}/${frontmatter.socialImage.toString()}`}
+                />
+                
+            
+            <Image src={`/${frontmatter.socialImage}`} width={1920} height={500} alt={frontmatter.altText} className="w-[100vw] h-[40vh] object-cover mb-2 lg:mb-6" />
             <div className='prose mx-auto'>
                 <h1 className='mx-auto text-center'>{frontmatter.title}</h1>
                 <article className='prose' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
