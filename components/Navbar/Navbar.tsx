@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Navbar() {
+interface Props {
+    fullName: string
+}
+
+export default function Navbar({fullName}: Props) {
     return (
         <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
             <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
@@ -32,7 +36,7 @@ export default function Navbar() {
                 </div>
                 <div className="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
                     <Link href="/">
-                        <a className="text-xl text-white pr-2 font-semibold">Navbar</a>
+                        <a className="text-xl text-white pr-2 font-semibold">{}</a>
                     </Link>
                     <ul className="navbar-nav mr-auto lg:flex lg:flex-row">
                         <li className="nav-item">

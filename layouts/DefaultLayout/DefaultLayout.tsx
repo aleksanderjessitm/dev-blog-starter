@@ -1,3 +1,4 @@
+import { config } from '../../blogConfig';
 import Navbar from '../../components/Navbar/Navbar'
 
 
@@ -8,7 +9,7 @@ interface Props {
 function DefaultLayout({ children }: Props) {
     return (
         <>
-            <Navbar />
+            <Navbar fullName={config.fullName}/>
             <a href="#content" className='sr-only'>Skip to main content</a>
             {children}
         </>
