@@ -1,13 +1,29 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it'
+import Image from 'next/image'
+import { PostFrontMatter } from '../../types/postFrontmatter';
+import Head from 'next/head';
 
-function PostDetail({ frontmatter, content }) {
+interface Props {
+    frontmatter: PostFrontMatter;
+    content: string
+}
+
+
+function PostDetail({ frontmatter, content }: Props) {
     return (
-        <div className='prose mx-auto'>
-            <h1>{frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        </div>
+        <>
+            <Head>
+                <meta name="description" content={frontmatter.metaDesc} />
+                <title>{frontmatter.metaTitle}</title>
+            </Head>
+            <img src={`/${frontmatter.socialImage}`} alt={frontmatter.altText} className="w-[100vw] h-[40vh] object-cover mb-2 lg:mb-6" />
+            <div className='prose mx-auto'>
+                <h1 className='mx-auto text-center'>{frontmatter.title}</h1>
+                <article className='prose' dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+            </div>
+        </>
     )
 }
 

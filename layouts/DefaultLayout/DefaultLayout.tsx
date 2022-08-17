@@ -9,7 +9,7 @@ function DefaultLayout({ children }: Props) {
     return (
         <>
             <Navbar />
-            <a href="#content">Skip to main content</a>
+            <a href="#content" className='sr-only'>Skip to main content</a>
             {children}
         </>
     )
