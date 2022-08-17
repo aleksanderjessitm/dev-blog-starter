@@ -17,12 +17,12 @@ export const config = {
             testimonial: "Such a great specialist, this one."
         },
         {
-            fullName: "John Doe",
+            fullName: "Jane Doe",
             position: "Probably a CEO",
             testimonial: "Such a great specialist, this one."
         },
         {
-            fullName: "John Doe",
+            fullName: "Mary Doe",
             position: "Probably a CEO",
             testimonial: "Such a great specialist, this one."
         },
