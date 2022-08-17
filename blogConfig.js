@@ -9,6 +9,6 @@ export const config = {
     ],
     twitterUserName: null,
     // When adding a domain name, don't add trailing slashes
-    domainName: "",
+    domainName: "https://astro-dev-blog.vercel.app",
     
 }

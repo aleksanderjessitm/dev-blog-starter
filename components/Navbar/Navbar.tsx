@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
-            <div className="px-6 w-full flex flex-wrap items-center justify-between">
+        <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
+            <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
                 <div className="flex items-center">
                     <button
                         className="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
@@ -31,15 +31,18 @@ export default function Navbar() {
                     </button>
                 </div>
                 <div className="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                    <Link href="/">
+                        <a className="text-xl text-white pr-2 font-semibold">Navbar</a>
+                    </Link>
                     <ul className="navbar-nav mr-auto lg:flex lg:flex-row">
                         <li className="nav-item">
                             <Link href="/">
-                                <a className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out">Home</a>
+                                <a className="nav-link block pr-2 lg:px-2 py-2 text-white opacity-60 hover:opacity-80 focus:opacity-80 transition duration-150 ease-in-out">Home</a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href={"/blog"}>
-                                <a className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out">Blog</a>
+                                <a className="nav-link block pr-2 lg:px-2 py-2 text-white opacity-60 hover:opacity-80 focus:opacity-80 transition duration-150 ease-in-out">Blog</a>
                             </Link>
                         </li>
                     </ul>
