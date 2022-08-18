@@ -8,7 +8,7 @@ export const config = {
         'Vue.js'
     ],
     twitterUserName: null,
-    // When adding a domain name, don't add trailing slashes
+    // When adding a domain name, don't add a trailing slash
     domainName: "https://astro-dev-blog.vercel.app",
     testimonials: [
         {

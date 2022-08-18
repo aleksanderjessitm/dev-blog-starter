@@ -20,10 +20,10 @@ function SEO({ title, description, keywords, socialImgPic = "/public/images/ITMA
             {config.twitterUserName && <meta key="seo-tt-creator" name="twitter:creator" content={config.twitterUserName} />}
             <meta key="seo-tt-title" name="twitter:title" content={title} />
             <meta key="seo-tt-description" name="twitter:description" content={description} />
-            <meta key="seo-tt-img" name="twitter:image" content={socialImgPic} />
-            <meta key="seo-og-title" property="og:title" content="The Rock" />
+            <meta key="seo-tt-img" name="twitter:image" content={`${config.domainName}/${socialImgPic}`} />
+            <meta key="seo-og-title" property="og:title" content={title} />
             <meta key="seo-og-type" property="og:type" content="website" />
-            <meta key="seo-og-img" property="og:image" content={socialImgPic} />
+            <meta key="seo-og-img" property="og:image" content={`${config.domainName}/${socialImgPic}`} />
         </Head>
     )
 }
