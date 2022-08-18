@@ -11,7 +11,7 @@ export default function Home() {
     <>
     <SEO 
       title={`Welcome to ${config.fullName}'s blog.`}
-      description={`My name is ${config.fullName}, and I write about ${config.expertise.join(", ")}.`}
+      description={`My name is ${config.fullName}, and I write about ${config.expertise.join(", ")}, and more.`}
       keywords={config.expertise}
       socialImgPic={"/public/images/ITMAGINATION_Logo_big_with_bg.png"}
     />  
@@ -19,7 +19,7 @@ export default function Home() {
       buttonHref='/blog'
       buttonText='Go to my blog'
       heading={`Hello, my name is ${config.fullName}.`}
-      subheading={`If you want to read about ${config.expertise.join(", ")}, then you are in the right place.`}
+      subheading={`If you want to read about ${config.expertise.join(", ")}, and more, then you are in the right place.`}
     />
     <Testimonials />
     </>
