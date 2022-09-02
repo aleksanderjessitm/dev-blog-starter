@@ -12,9 +12,10 @@ function Testimonials() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 lg:gap-12 text-center">
-                {config.testimonials.map(testimonial => {
-                    return <Testimonial key={testimonial.fullName} fullName = { testimonial.fullName } position = { testimonial.position } testimonial = { testimonial.testimonial } />
-                })}
+
+                    {config.testimonials.map(testimonial => {
+                        return <Testimonial key={testimonial.fullName} fullName={testimonial.fullName} position={testimonial.position} testimonial={testimonial.testimonial} />
+                    })}
             </div>
         </section>
     )

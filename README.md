@@ -1,10 +1,16 @@
 # Dev Blog Starter
 
+[![Lighthouse Accessibility Badge](./lighthouse_accessibility.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse Performance Badge](./lighthouse_performance.svg)](https://github.com/emazzotta/lighthoubadgese-badges)
+[![Lighthouse SEO ](./lighthouse_seo.svg)](https://github.com/emazzotta/lighthouse-badges)
+[![Lighthouse Best Practices Badge](./lighthouse_best-practices.svg)](https://github.com/emazzotta/lighthouse-badges)
+
 This repository is meant to serve as a quick start into the world of blogging.
 
 It includes a basic SEO setup, and a basic blogging setup. Nothing too fancy, though it will work.
 
 ## Config
+
 If you look over at [blogConfig](./blogConfig.js), you will see that I made configuration super easy.
 
 Just change some values, and you are all set.

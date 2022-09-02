@@ -1,7 +1,13 @@
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import { config } from '../../blogConfig';
-import Footer from '../../components/Footer/Footer';
-import Navbar from '../../components/Navbar/Navbar'
 
+import Navbar from '../../components/Navbar/Navbar'
+import Spinner from '../../components/Spinner/Spinner';
+
+const Footer = dynamic(() => { return import('../../components/Footer/Footer') }, {
+    suspense: true
+})
 
 interface Props {
     children
@@ -10,12 +16,14 @@ interface Props {
 function DefaultLayout({ children }: Props) {
     return (
         <>
-            <Navbar fullName={config.fullName}/>
+            <Navbar fullName={config.fullName} />
             <a href="#content" className='sr-only'>Skip to main content</a>
             <main className='min-h-screen'>
-            {children}
+                {children}
             </main>
-            <Footer />
+            <Suspense fallback={<Spinner />}>
+                <Footer />
+            </Suspense>
         </>
     )
 }
